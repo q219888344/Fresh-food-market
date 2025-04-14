@@ -1,0 +1,79 @@
+{
+  "id": "4888553",
+  "name": "小兔鲜儿",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2076190",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e86e",
+      "unicode_decimal": 59502
+    },
+    {
+      "icon_id": "2076193",
+      "name": "喜欢2",
+      "font_class": "xihuan",
+      "unicode": "e86f",
+      "unicode_decimal": 59503
+    },
+    {
+      "icon_id": "2076194",
+      "name": "喜欢",
+      "font_class": "xihuan1",
+      "unicode": "e870",
+      "unicode_decimal": 59504
+    },
+    {
+      "icon_id": "2076258",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e88f",
+      "unicode_decimal": 59535
+    },
+    {
+      "icon_id": "2076265",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e891",
+      "unicode_decimal": 59537
+    },
+    {
+      "icon_id": "2076284",
+      "name": " 发现",
+      "font_class": "faxian",
+      "unicode": "e898",
+      "unicode_decimal": 59544
+    },
+    {
+      "icon_id": "2076288",
+      "name": " 购物车",
+      "font_class": "gouwuche",
+      "unicode": "e899",
+      "unicode_decimal": 59545
+    },
+    {
+      "icon_id": "9645687",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "9645690",
+      "name": "下一个",
+      "font_class": "xiayige",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "11372702",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e8b9",
+      "unicode_decimal": 59577
+    }
+  ]
+}
