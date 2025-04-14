@@ -1,0 +1,430 @@
+/* 首页内容样式 */
+.banner {
+  height: 500px;
+  background-color: #f5f5f5;
+}
+
+.banner .wrapper {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.banner .pic {
+  display: flex;
+}
+
+.subnav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 500px;
+  background-color: rgba(0,0,0,0.42);
+}
+
+.subnav li {
+  padding-left: 30px;
+  padding-right: 12px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+.subnav li a {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.subnav li .text {
+  display: flex;
+}
+
+.subnav li a h3 {
+  font-size: 16px;
+  margin-right: 14px;
+}
+
+
+.subnav li .iconfont {
+  font-size: 14px;
+}
+
+.subnav li:hover,
+.subnav li.active {
+  background-color: #5eb69c;
+  cursor: pointer;
+}
+/* 轮播图下方的小圆点样式 */
+.banner ol {
+  position: absolute; /* 绝对定位 */
+  right: 14px; /* 距右边14px */
+  bottom: 15px; /* 距底部15px */
+  display: flex; /* 使用弹性布局 */
+}
+
+/* 小圆点的外层样式 */
+.banner ol li {
+  margin-left: 8px; /* 左边间距8px */
+  width: 22px; /* 宽度22px */
+  height: 22px; /* 高度22px */
+  border-radius: 50%; /* 圆形边框 */
+  cursor: pointer; /* 鼠标悬停时显示为指针 */
+}
+
+/* 小圆点的内层样式 */
+.banner ol i {
+  display: block; /* 块级元素 */
+  margin: 4px; /* 内边距4px */
+  width: 14px; /* 宽度14px */
+  height: 14px; /* 高度14px */
+  border-radius: 50%; /* 圆形边框 */
+  background-color: rgba(255, 255, 255, 0.5); /* 半透明白色背景 */
+}
+
+/* 当前选中的小圆点外层样式 */
+.banner ol .current {
+  background-color: rgba(255, 255, 255, 0.5); /* 半透明白色背景 */
+}
+
+/* 当前选中的小圆点内层样式 */
+.banner ol .current i {
+  background-color: #fff; /* 白色背景 */
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  height: 42px;
+} 
+
+.title .left {
+  display: flex;
+}
+
+.title .left h3 {
+  font-size: 30px;
+  margin-right: 35px;
+}
+
+.title .left p {
+  align-self: flex-end;
+  color: #a1a1a1;
+}
+
+.title .right .more{
+  line-height: 42px;
+  color: #a1a1a1;
+}
+
+.title .right .more .iconfont {
+  margin-left: 10px;
+}
+
+.bd ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bd li {
+  width: 306px;
+  height: 406px;
+  background-color: #F0F9F4;
+}
+
+.bd li .pic {
+  width: 306px;
+  height: 306px;
+}
+
+.bd li .txt {
+  text-align: center;
+}
+
+.bd li .txt h4 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.goods .bd p {
+  font-size: 18px;
+  color: #aa2113;
+}
+
+.goods .bd p span {
+  font-size: 22px;
+}
+
+.recommend .bd li {
+  background-color: #fff;
+}
+
+.recommend .bd p {
+  color: #a1a1a1;
+}
+
+.brand {
+  margin-top: 60px;
+  height: 468px;
+  background-color: #f5f5f5;
+}
+
+.brand .wrapper {
+  overflow: hidden;
+  height: 468px;
+}
+
+.brand .title {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.brand .button {
+  display: flex;
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+}
+
+.brand .button a {
+  margin-left: 12px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+}
+
+.brand .button .prev {
+  background-color: #ddd;
+}
+
+.brand .button .next {
+  background-color: #00be9a;
+}
+
+.brand .bd li {
+  width: 240px;
+  height: 305px;
+}
+/* 生鲜 */
+.fresh .title {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.fresh .right {
+  display: flex;
+}
+
+.fresh .right ul {
+  display: flex;
+  margin-top: 10px;
+  margin-right: 58px;
+}
+
+.title .right ul a {
+  display: block;
+  margin-left: 6px;
+  padding: 0 7px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+.title .right ul a:hover {
+  background-color: #00be9a;
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .left {
+  width: 240px;
+  height: 610px;
+}
+
+.content .left img {
+  width: 100%;
+  height: 100%;
+}
+
+.content .right {
+  width: 980px;
+  height: 610px;
+}
+
+.content .right ul {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content .right li {
+  overflow: hidden;
+  position: relative;
+  padding: 10px 21px 0;
+  width: 240px;
+  height: 300px;
+  border:  2px solid #fff;
+}
+
+.content .pic {
+  width: 166px;
+  height: 160px;
+}
+
+.content .pic img {
+  width: 100%;
+  height: 100%;
+  margin-left: 14px;
+}
+
+.content .info {
+  margin-top: 14px;
+  margin-bottom: 5px;
+  height: 60px;
+  line-height: 19px;
+}
+.content .price {
+  color: #af2f22;
+}
+
+.content .price span {
+  font-size: 22px;
+}
+
+.content .cover {
+  position: absolute;
+  width: 240px;
+  height: 84px;
+  background-color: #00be9a;
+  left: 0;
+  bottom: -86px;
+  color: #fff;
+  text-align: center;
+  padding-top: 15px;
+  transition: all 0.5s;
+}
+
+.content .cover p:nth-child(1) {
+  font-size: 18px;
+}
+
+.content .cover p:nth-child(2) {
+  margin: 3px auto 6px;
+  width: 120px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.11);
+}
+
+.content .cover p:nth-child(3) {
+  font-size: 13px;
+}
+
+.content .cover p:nth-child(3) .iconfont {
+  font-size: 14px;
+}
+
+.content .right li:hover .cover {
+  bottom: 0;
+}
+
+.content .right li:hover {
+  border: 2px solid #00be9a;
+  cursor: pointer;
+}
+
+.topic {
+  margin-bottom: 40px;
+}
+
+.topic .title {
+  margin-top: 100px;
+}
+
+.topic-bd ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.topic-bd li{
+  width: 405px;
+  height: 355px;
+}
+
+.topic-bd .pic {
+  position: relative;
+}
+
+.topic-bd .pic img{
+  width: 100%;
+}
+
+.topic-bd .txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  width: 405px;
+  height: 63px;
+  font-size: 14px;
+  color: #666;
+}
+
+.topic-bd .txt .left {
+  display: flex;
+}
+
+.topic-bd .txt .left p{
+  margin-right: 20px;
+}
+
+.topic-bd .txt .left p:nth-child(1) i {
+  color: #aa2113;
+}
+
+.topic-bd .cover {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 15px;
+  width: 405px;
+  height: 90px;
+  background-image: linear-gradient(180deg, rgba(137, 137, 137, 0.00) 0%, rgba(0, 0, 0, 0.90) 100%);
+}
+
+.topic-bd .cover .left {
+  color: #fff;
+}
+
+.topic-bd .cover .left h4 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.topic-bd .cover .right {
+  color: #aa2113;
+  background-color: #fff;
+  height: 25px;
+  padding: 0 7px;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.topic-bd .cover .right span {
+  font-size: 18px;
+}
