@@ -176,7 +176,7 @@
   </div>
 
   <!-- 新鲜好物-->
-  <div class="goods wrapper">
+  <div class="xtx_goods wrapper">
     <!-- 标题 -->
     <div class="title">
       <div class="left ">
@@ -231,7 +231,7 @@
   </div>
 
   <!-- 人气推荐 -->
-  <div class="recommend wrapper">
+  <div class="xtx_recommend wrapper">
     <div class="goods wrapper">
       <!-- 标题 -->
       <div class="title">
@@ -285,7 +285,7 @@
   </div>
 
   <!-- 热门品牌 -->
-  <div class="brand">
+  <div class="xtx_brand">
     <div class="wrapper">
       <!-- 标题 -->
       <div class="title">
@@ -1065,7 +1065,7 @@
   </div>
 
   <!-- 最新专题 -->
-  <div class="topic wrapper">
+  <div class="xtx_topic wrapper">
     <div class="title">
       <div class="left">
         <h3>最新专题</h3>
@@ -1262,12 +1262,77 @@
   <!-- 电梯导航 -->
   <div class="elevator">
     <ul class="elevator-list">
-      <li><a href="javascript:;">新鲜好物</a></li>
-      <li><a href="javascript:;">人气推荐</a></li>
-      <li><a href="javascript:;">热门品牌</a></li>
-      <li><a href="javascript:;">最新专题</a></li>
-      <li><a href="javascript:;">回到顶部</a></li>
+      <li><a href="javascript:;" data-name="goods">新鲜好物</a></li>
+      <li><a href="javascript:;" data-name="recommend">人气推荐</a></li>
+      <li><a href="javascript:;" data-name="brand">热门品牌</a></li>
+      <li><a href="javascript:;" data-name="topic">最新专题</a></li>
+      <li><a href="javascript:;" id="backTop">回到顶部</a></li>
     </ul>
   </div>
+
+  <script>
+    (function() {
+    //页面滑动显示电梯导航
+    const elevator = document.querySelector('.elevator')
+    const entry = document.querySelector('.banner')
+    
+    window.addEventListener('scroll', function() {
+      const n = document.documentElement.scrollTop
+      
+      elevator.style.right = n >= entry.offsetTop ? '200px' : '-50px'
+    })
+
+    //点击回到顶部
+    const backTop = document.querySelector('#backTop')
+    backTop.addEventListener('click', function() {
+      window.scrollTo(0, 0)
+    })
+    })();
+    
+    (function() {
+      //电梯导航点击跳转对应位置
+      const list = document.querySelector('.elevator-list')
+
+      list.addEventListener('click', function(e) {
+        if(e.target.tagName === 'A' && e.target.dataset.name) {
+          const old = document.querySelector('.elevator-list .active')
+          if(old) {old.classList.remove('active')}
+
+          e.target.classList.add('active')
+
+          const top = document.querySelector(`.xtx_${ e.target.dataset.name }`).offsetTop
+
+          document.documentElement.scrollTop = top
+        }
+      })
+
+      //页面滚动
+      window.addEventListener('scroll', function() {
+        const n = document.documentElement.scrollTop
+
+        const old =document.querySelector('.elevator-list .active')
+
+        if(old) {old.classList.remove('active')}
+
+        const goods = document.querySelector('.xtx_goods')
+        const recommend = document.querySelector('.xtx_recommend')
+        const brand = document.querySelector('.xtx_brand')
+        const topic = document.querySelector('.xtx_topic')
+
+        if(n >= goods.offsetTop && n < recommend.offsetTop){
+          document.querySelector('[data-name=goods]').classList.add('active')
+        }
+        if(n >= recommend.offsetTop && n < brand.offsetTop) {
+          document.querySelector('[data-name=recommend]').classList.add('active')
+        }
+        if(n >= brand.offsetTop && n < topic.offsetTop) {
+          document.querySelector('[data-name=brand]').classList.add('active')
+        }
+        if(n >= topic.offsetTop){
+          document.querySelector('[data-name=topic]').classList.add('active')
+        }
+      })
+    })();
+  </script>
 </body>
 </html>

@@ -1,4 +1,8 @@
 /* 首页内容样式 */
+html {
+  scroll-behavior: smooth;  /*页面滑动*/
+}
+
 .banner {
   height: 500px;
   background-color: #f5f5f5;
@@ -151,47 +155,47 @@
   font-size: 20px;
 }
 
-.goods .bd p {
+.xtx_goods .bd p {
   font-size: 18px;
   color: #aa2113;
 }
 
-.goods .bd p span {
+.xtx_goods .bd p span {
   font-size: 22px;
 }
 
-.recommend .bd li {
+.xtx_recommend .bd li {
   background-color: #fff;
 }
 
-.recommend .bd p {
+.xtx_recommend .bd p {
   color: #a1a1a1;
 }
 
-.brand {
+.xtx_brand {
   margin-top: 60px;
   height: 468px;
   background-color: #f5f5f5;
 }
 
-.brand .wrapper {
+.xtx_brand .wrapper {
   overflow: hidden;
   height: 468px;
 }
 
-.brand .title {
+.xtx_brand .title {
   position: relative;
   margin-bottom: 40px;
 }
 
-.brand .button {
+.xtx_brand .button {
   display: flex;
   position: absolute;
   bottom: -25px;
   right: 0;
 }
 
-.brand .button a {
+.xtx_brand .button a {
   margin-left: 12px;
   width: 20px;
   height: 20px;
@@ -200,15 +204,15 @@
   color: #fff;
 }
 
-.brand .button .prev {
+.xtx_brand .button .prev {
   background-color: #ddd;
 }
 
-.brand .button .next {
+.xtx_brand .button .next {
   background-color: #00be9a;
 }
 
-.brand .bd li {
+.xtx_brand .bd li {
   width: 240px;
   height: 305px;
 }
@@ -343,11 +347,11 @@
   cursor: pointer;
 }
 
-.topic {
+.xtx_topic {
   margin-bottom: 40px;
 }
 
-.topic .title {
+.xtx_topic .title {
   margin-top: 100px;
 }
 
@@ -431,14 +435,15 @@
 /* 电梯导航 */
 .elevator {
   position: fixed;
-  right: 200px;
-  top: 200px;
+  right: -50px;
+  top: 250px;
   width: 50px;
   height: 300px;
 }
 
 .elevator{
   height: 100%;
+  transition: all 0.5s;
 }
 
 .elevator-list {
@@ -453,7 +458,6 @@
   margin-bottom: 10px;
   border: 1px solid skyblue;
   text-align: center;
-  border-radius: 10px;
   padding: 4px;
   cursor: pointer;
 }
@@ -463,5 +467,17 @@
 }
 
 .elevator-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
   font-size: 15px;
+  color: rgb(49, 122, 170);
+}
+
+.elevator-list li:hover a {
+  color: skyblue;
+}
+
+.elevator-list li a.active {
+  color: skyblue;
 }
