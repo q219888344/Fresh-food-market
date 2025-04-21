@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="小兔鲜儿官网，致力于打造全球最大的食品、生鲜电商购物平台。">
+  <meta name="keywords" content="小兔鲜儿，食品，生鲜，服装，家电，电商，购物">
+  <title>小兔鲜儿-新鲜、惠民、快捷！</title>
+  <link rel="shortcut icon" href="favicon.ico" type="./favicon.ico">
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+  <!-- 登录头部 -->
+  <div class="xtx_login_header">
+    <h1 class="logo"></h1>
+    <a class="home" href="./index.html">进入网站首页 >></a>
+  </div>
+
+  <!-- 登录内容 -->
+  <div class="xtx_login_main">
+    <div class="wrapper">
+      <form action="" autocomplete="off">
+        <div class="box">
+          <div class="tab_nav">
+            <a href="javascript:;" class="active" data-id="0">账户登录</a>
+            <a href="javascript:;" data-id="1">二维码登录</a>
+          </div>
+          <div class="tab_pane">
+            <div  class="link">
+              <a href="javascript:;">手机验证码登录</a>
+            </div>
+            <div class="input">
+              <input required type="text" placeholder="请输入用户名称/手机号码" name="username">
+              <input required type="password" placeholder="请输入密码" name="password">
+              <div class="agree">
+                <label for="my_checkbox">
+                  <input type="checkbox" name="agree" id="my_checkbox" class="remember" value="1">
+                </label>
+                我已同意<a href="javascript:;">《服务条款》</a>和<a href="javascript:;">《用户服务协议》</a>
+                <!-- <span class="iconfont icon-xuanzhong"></span> -->
+              </div>
+              <div class="button clearfix">
+                <button type="submit" class="dl">登 录</button>
+                <a class="fl" href="#">忘记密码？</a>
+                <a class="fr" href="./register.html">免费注册</a>
+              </div>
+            </div>
+          </div>
+          <div class="tab_pane" style="display: none;">
+            <img class="code" src="./uploads/qrcode.png" alt="">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="wrapper">
+      <!-- 版权 -->
+      <div class="copyright">
+        <p>
+          <a href="javascript:;">关于我们</a>|
+          <a href="javascript:;">帮助中心</a>|
+          <a href="javascript:;">售后服务</a>|
+          <a href="javascript:;">配送与验收</a>|
+          <a href="javascript:;">商务合作</a>|
+          <a href="javascript:;">搜索推荐</a>|
+          <a href="javascript:;">友情链接</a>
+        </p>
+        <p>CopyRight © 小兔鲜儿</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //tab栏切换
+    const tab_nav = document.querySelector('.tab_nav')
+    const pane = document.querySelectorAll('.tab_pane')
+
+    tab_nav.addEventListener('click', function(e) {
+      if(e.target.tagName === 'A') {
+        tab_nav.querySelector('.active').classList.remove('active')
+        e.target.classList.add('active')
+
+        for(let i = 0;i < pane.length; i++) {
+          pane[i].style.display = 'none'
+        }
+
+        pane[e.target.dataset.id].style.display = 'block'
+      }
+    })
+
+    //点击提交
+    const form = document.querySelector('form')
+    const agree = document.querySelector('[name=agree]')
+    const username = document.querySelector('[name=username]')
+    form.addEventListener('submit', function(e) {
+      e.preventDefault()
+      if(!agree.checked) {
+        return alert('请勾选同意协议')
+      }
+
+      localStorage.setItem('xtx_uname', username.value)
+      location.href = './index.html'
+    })
+
+  </script>
+</body>
+</html>

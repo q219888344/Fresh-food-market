@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1307736",
+      "name": "选中",
+      "font_class": "xuanzhong",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "1307737",
+      "name": "未选",
+      "font_class": "weixuan",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
       "icon_id": "2076190",
       "name": "搜索",
       "font_class": "sousuo",

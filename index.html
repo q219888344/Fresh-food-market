@@ -19,8 +19,8 @@
   <div class="shortcut">
     <div class="wrapper">
       <ul>
-        <li><a href="javascript:;">请先登录</a></li>
-        <li><a href="javascript:;">免费注册</a></li>
+        <li><a href="./login.html">请先登录</a></li>
+        <li><a href="./register.html">免费注册</a></li>
         <li><a href="javascript:;">我的订单</a></li>
         <li><a href="javascript:;">会员中心</a></li>
         <li><a href="javascript:;">帮助中心</a></li>
@@ -1333,6 +1333,30 @@
         }
       })
     })();
+
+    //
+    const li1 = document.querySelector('.shortcut li:first-child')
+    const li2 = li1.nextElementSibling
+    //登录渲染
+    function render() {
+      const uname = localStorage.getItem('xtx_uname')
+      
+      if(uname) {
+        li1.innerHTML = `<a href="javascript:;">${uname}</a>`
+        li2.innerHTML = `<a href="javascript:;">退出登录</a>`
+      }else {
+        li1.innerHTML = `<a href="./login.html">请先登录</a>`
+        li2.innerHTML = `<a href="./register.html">免费注册</a>`
+      }
+    }
+    render()
+
+    //退出登录
+    li2.addEventListener('click', function() {
+      localStorage.removeItem('xtx_uname')
+      render()
+      location.href = './login.html'
+    })
   </script>
 </body>
 </html>
