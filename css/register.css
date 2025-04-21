@@ -1,0 +1,79 @@
+.register {
+  height: 1000px;
+  background-color: #f0f0f0;
+  padding: 100px 0;
+}
+
+.register .wrapper {
+  height: 100%;
+  background-color: #fff;
+}
+
+.register .wrapper h3 {
+  font-size: 30px;
+  margin-left: 50px;
+  font-weight: 400;
+}
+
+.xtx_form {
+  width: 400px;
+  padding: 50px;
+  margin: 50px auto;
+}
+
+.xtx_form .xtx_form_item {
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.xtx_form .xtx_form_item input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.xtx_form .xtx_form_item .msg {
+  position: absolute;
+  bottom: -25px;
+  left: 15px;
+  font-size: 12px;
+  color: #f56c6c;
+}
+
+.xtx_form .xtx_form_item .code {
+  position: absolute;
+  right: 10px; /* 距离输入框右侧的距离 */
+  top: 50%; /* 垂直居中 */
+  transform: translateY(-50%); /* 精确垂直居中 */
+  background: #1181e9; /* 背景色（可根据设计调整） */
+  padding: 5px 10px; /* 内边距 */
+  border-radius: 4px; /* 圆角（可选） */
+  text-decoration: none; /* 去掉下划线 */
+  color: #fff; /* 文字颜色 */
+}
+
+/* 复选框和标签样式 */
+.xtx_form_item .iconfont {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.xtx_form_item i {
+  color: #1181e9;
+}
+
+/* 按钮样式 */
+.xtx_form_item button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1181e9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
